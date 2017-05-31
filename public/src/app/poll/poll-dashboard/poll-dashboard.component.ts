@@ -33,7 +33,7 @@ export class PollDashboardComponent implements OnInit {
   getCurrentUser(){
     this._pollService.getCurrent()
       .then((user)=> {
-        console.log(user);    
+        // console.log(user);    
         this.user = user
       })
       .catch((err) => this._router.navigate(['/login']))
