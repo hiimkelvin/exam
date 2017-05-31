@@ -15,7 +15,7 @@
 		<td><a [routerLink]="['show', poll._id]">{{ poll.question }}?</a></td>
     <td>{{ poll.createdAt | date: 'mediumDate' }}</td>
 		<div *ngIf='user'>
-			<td><a *ngIf='poll._user.name == user' [routerLink]="['destroy', poll._id]">Delete</a></td>
+			<td><a *ngIf='poll._user.name == user.name' [routerLink]="['destroy', poll._id]">Delete</a></td>
 		</div>
 	</tr>
 </table>
