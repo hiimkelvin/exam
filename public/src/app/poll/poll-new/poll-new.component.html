@@ -1,0 +1,25 @@
+<a [routerLink]="['/dashboard']">Cancel</a>
+<a href="/logout">Logout</a>
+
+<h1>New Question</h1>
+
+<p *ngIf='errors'>{{ errors._body }}</p>
+
+<form (submit)="addPoll(formData)" #formData="ngForm">
+  <label>
+    Question: <textarea name="question" id="" cols="35" rows="1" ngModel></textarea>
+  </label>
+  <label>
+      <p>Option 1: <input type="text" name="option1" ngModel></p>
+  </label>
+  <label>
+      <p>Option 2: <input type="text" name="option2" ngModel></p>
+  </label>
+  <label>
+      <p>Option 3: <input type="text" name="option3" ngModel></p>
+  </label>
+  <label>
+      <p>Option 4: <input type="text" name="option4" ngModel></p>
+  </label>
+	<input type="submit" value="Create Poll">
+</form>

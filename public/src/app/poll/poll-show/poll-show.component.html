@@ -1,0 +1,20 @@
+<a [routerLink]="['/dashboard']">Go to Polls</a>
+
+<div *ngIf='polls'>
+  <h2>{{ polls.question }}?</h2>
+  <p>Click the Vote button to choose one.</p>
+
+  <table>
+    <tr>
+      <th>Option</th>
+      <th>Current Count of Votes</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>{{ polls.option1}}</td>
+      <td></td>
+      <td><button>Vote</button></td>
+    </tr>
+  </table>
+</div>
+
