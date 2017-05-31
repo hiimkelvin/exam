@@ -25,7 +25,7 @@ export class PollDashboardComponent implements OnInit {
   getAllPolls(){
   	this._pollService.getPolls()
   		.then( poll => {
-  			console.log(poll);
+  			// console.log(poll);
   			this.polls = poll})
   		.catch( response => console.log(response) )
   }
